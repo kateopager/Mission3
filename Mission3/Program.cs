@@ -58,17 +58,17 @@ namespace Mission3
                     if (playerWin)
                     {
                         winner = true;
-                        Console.WriteLine("\nCongratulations Player " + player.ToString() + "! You won the game!");
+                        //Console.WriteLine("\nCongratulations Player " + player.ToString() + "! You won the game!");
                     }
                     else
                     {
                         player++;
                     }
-                    if (turn == 9)
+                   /* if (turn == 9)
                     {
                         winner = true;
-                        Console.WriteLine("\nPlayer 1 and Player 2 tied!");
-                    }
+                        //.WriteLine("\nPlayer 1 and Player 2 tied!");
+                    }*/
                     turn++;
                 }
                 Console.WriteLine("\nWould you like to play again? Y/N");
