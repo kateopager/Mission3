@@ -12,11 +12,11 @@ namespace Mission3
         {
             Console.WriteLine();
             //second half of it is what will replace the numbers in the braces
-            Console.WriteLine("{ 0} | { 1} | { 2}", tttboard[0], tttboard[1], tttboard[2]);
+            Console.WriteLine("{0} | {1} | {2}", tttboard[0], tttboard[1], tttboard[2]);
             Console.WriteLine("---------");
-            Console.WriteLine("{ 0} | { 1} | { 2}", tttboard[3], tttboard[4], tttboard[5]);
+            Console.WriteLine("{0} | {1} | {2}", tttboard[3], tttboard[4], tttboard[5]);
             Console.WriteLine("---------");
-            Console.WriteLine("{ 0} | { 1} | { 2}", tttboard[6], tttboard[7], tttboard[8]);
+            Console.WriteLine("{0} | {1} | {2}", tttboard[6], tttboard[7], tttboard[8]);
         }
         public int updateBoard(char[] tttboard, int space, int player)
         {
@@ -41,49 +41,49 @@ namespace Mission3
                 return player--;
             }
         }
-        public bool gameOver(char[] tttboard)
+        public bool gameOver(char[] tttboard, int player)
         {
             // Horizontal Wins
             if (tttboard[0] == tttboard[1] && tttboard[1] == tttboard[2])
             {
-                Console.WriteLine("Player ” +tttboard[0] + ” wins!");
+                Console.WriteLine("Player " + player + " wins!");
                 return true;
             }
             if (tttboard[3] == tttboard[4] && tttboard[4] == tttboard[5])
             {
-                Console.WriteLine("Player ” +tttboard[3] + ” wins!");
+                Console.WriteLine("Player " + player + " wins!");
                 return true;
             }
             if (tttboard[6] == tttboard[7] && tttboard[7] == tttboard[8])
             {
-                Console.WriteLine("Player ” +tttboard[6] + ” wins!");
+                Console.WriteLine("Player " + player + " wins!");
                 return true;
             }
             // Vertical Wins
             if (tttboard[0] == tttboard[3] && tttboard[3] == tttboard[6])
             {
-                Console.WriteLine("Player ” +tttboard[0] + ” wins!");
+                Console.WriteLine("Player " + player + " wins!");
                 return true;
             }
             if (tttboard[1] == tttboard[4] && tttboard[4] == tttboard[7])
             {
-                Console.WriteLine("Player ” +tttboard[1] + ” wins!");
+                Console.WriteLine("Player " + player + " wins!");
                 return true;
             }
             if (tttboard[2] == tttboard[5] && tttboard[5] == tttboard[8])
             {
-                Console.WriteLine("Player ” +tttboard[2] + ” wins!");
+                Console.WriteLine("Player " + player + " wins!");
                 return true;
             }
             //Diagonal Wins
             if (tttboard[0] == tttboard[4] && tttboard[4] == tttboard[8])
             {
-                Console.WriteLine("Player ” +tttboard[0] + ” wins!");
+                Console.WriteLine("Player " + player + " wins!");
                 return true;
             }
             if (tttboard[2] == tttboard[4] && tttboard[4] == tttboard[6])
             {
-                Console.WriteLine("Player ” +tttboard[2] + ” wins!");
+                Console.WriteLine("Player " + player + " wins!");
                 return true;
             }
             //Draw
